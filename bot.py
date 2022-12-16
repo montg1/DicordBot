@@ -3,7 +3,7 @@ import openai
 import discord
 from discord.ext import commands
 bot = commands.Bot(intents=discord.Intents.all() , command_prefix= "!" , description='The Best Bot For the Best User!')
-openai.api_key = "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"
+openai.api_key = "API_KEY"
 
 
 @bot.command()
@@ -37,4 +37,4 @@ async def find(ctx, *args):
     response = completions.choices[0].text
     await ctx.channel.send(response)
 
-bot.run("MTA1MzI2NjA5NjA3NTA2MzM0Ng.GGuilk.LBxA_Gl84IKhFR_dCuAcoEA_zq4UqT4hCoPaMU")
+bot.run("DISCORD_TOKEN")
