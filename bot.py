@@ -1,8 +1,9 @@
-
+from matplotlib import animation
+import openai
 import discord
 from discord.ext import commands
 bot = commands.Bot(intents=discord.Intents.all() , command_prefix= "!" , description='The Best Bot For the Best User!')
-
+openai.api_key = "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"
 
 
 @bot.command()
@@ -13,4 +14,27 @@ async def greet(ctx):
 async def pi(ctx):
     await ctx.send("3.141")
 
-bot.run("TOKEN")
+@bot.command()
+async def ping(ctx):
+    await ctx.channel.send("pong")
+
+@bot.command()
+async def find(ctx, *args):
+    message = ""
+    for arg in args:
+        message = message + " " + arg
+    prompt = (f"{message}")
+    model_engine = "text-davinci-002"
+    prompt = (f"{message}")
+    completions = openai.Completion.create(
+        engine=model_engine,
+        prompt=prompt,
+        max_tokens=1024,
+        n=1,
+        stop=None,
+        temperature=0.5,
+    )
+    response = completions.choices[0].text
+    await ctx.channel.send(response)
+
+bot.run("MTA1MzI2NjA5NjA3NTA2MzM0Ng.GGuilk.LBxA_Gl84IKhFR_dCuAcoEA_zq4UqT4hCoPaMU")
