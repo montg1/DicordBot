@@ -8,8 +8,9 @@ bot = commands.Bot(intents=discord.Intents.all() , command_prefix= "!" , descrip
 @bot.command()
 async def greet(ctx):
     await ctx.send("Hello, World!")
-
+    
+@bot.command()
 async def pi(ctx):
     await ctx.send("3.141")
 
-bot.run("MTA1MzI2NjA5NjA3NTA2MzM0Ng.G95O8N.baMEa0jQrn4aARYSxH1cFUSKl0b_8JDbz8Voqk")
+bot.run("TOKEN")
