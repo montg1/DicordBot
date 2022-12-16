@@ -1,3 +1,3 @@
 # DicordBot
-pip install openai
+pip install openai \n
 pip install discord.py
