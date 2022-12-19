@@ -5,7 +5,7 @@ import googleapiclient.discovery
 import pafy
 
 # Replace TOKEN with your bot's token
-TOKEN = 'MTA1MzI2NjA5NjA3NTA2MzM0Ng.Gv2jUt.AeIu-KKoHfCx4fIKof5A01x9UFAde79BUyTSA0'
+TOKEN = ''
 
 # Replace API_KEY with your YouTube API key
 API_KEY = 'AIzaSyCKeOz2tlYLp0-JyxwVKonowW74kjwn2Lc'
